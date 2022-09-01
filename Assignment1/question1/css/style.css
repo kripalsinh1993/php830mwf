@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: lightgray;
+}
+
+h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+
+.form {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    background-color: yellowgreen;
+    border-radius: 2%;
+}
+
+#btn {
+    width: 20%;
+    height: auto;
+    margin: auto;
+    padding: 10px;
+    margin-left: 40%;
+    background-color: rgba(50, 0, 0, 0.5);
+    font-size: 25px;
+    color: white;
+    border-radius: 60px;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}

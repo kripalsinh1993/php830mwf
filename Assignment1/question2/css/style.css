@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: purple !important;
+}
+
+h2,
+p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    margin-right: 65px;
+    padding-top: 15px;
+}
+
+p {
+    margin-right: 65px;
+    padding-top: 15px;
+}
+
+.my-profile,
+.my-profile1 {
+    max-width: 100% !important;
+    margin-top: auto;
+    border-right: solid 2px lightgray;
+}
+
+#btn {
+    width: 200px;
+    height: auto;
+    margin: auto;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: purple;
+    margin-left: 30%;
+    margin-top: 5%;
+    color: white;
+    font-size: 17px;
+}
