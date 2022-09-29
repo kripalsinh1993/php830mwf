@@ -1,0 +1,77 @@
+SQL assingment answer
+
+Q1.create table employee 
+(
+ empid int AUTO_INCREMENT primary key,
+ firstname varchar(255),
+ lastname varchar(255),
+ salary float,
+ joining_date varchar(255),
+ department varchar(255)
+)
+
+Q2.INSERT into employee VALUES('null','virat','kohli',15000,'20/10/2022','CS'),
+('null','ravindra','jadeja',12000,'3/10/2022','Account'),
+('null','suryakumar','yadav',13000,'4/10/2022','IT'),
+('null','harbhajan','singh',10000,'22/10/2022','Mechanical'),
+('null','hardik','padya',16000,'2/10/2022','sports'),
+('null','himesh','pandya',20000,'7/10/2022','Music');
+
+
+Q3.	create table incentives
+(incentiveid int AUTO_INCREMENT PRIMARY KEY,
+ empid int REFERENCES employee(empid),
+ incentivedate varchar(255),
+ incentive_ammount float
+)
+
+Q4. insert INTO incentives VALUES
+('null','1','20/10/2020',14000),
+('null','2','22/11/2022',150000),
+('null','3','2/2/2020',1400),
+('null','4','3/3/2021',140);
+
+
+Q5.
+select firstname as employee_name from employee;
+
+Q6.
+SELECT firstname,joining_date FROM employee;
+
+Q7.
+
+SELECT * FROM employee ORDER BY firstname ASC, salary DESC;
+
+Q8.
+select * FROM employee WHERE firstname like '%a%'
+
+Q9.
+select * from employee WHERE joining_date='3/10/2022';
+
+Q10.
+select sum(salary),department FROM employee GROUP BY department ORDER BY sum(salary)DESC;
+
+Q11.
+SELECT MAX(salary),department FROM employee GROUP BY department ORDER BY MAX(salary) ASC;
+
+Q12.
+
+SELECT firstname,incentive_ammount FROM employee JOIN incentives on employee.empid WHERE incentive_ammount > 3000;
+
+Q13.
+
+SELECT MAX(salary) FROM employee WHERE salary < (select MAX(salary) from employee);
+
+Q14.
+
+SELECT firstname,incentive_ammount FROM incentives LEFT JOIN employee ON incentives.empid=employee.empid;
+
+Q15.
+SELECT firstname,lastname,salary FROM employee;
+
+Q16.
+
+SELECT department,max(salary) FROM employee GROUP BY department;
+
+Q17.
+
