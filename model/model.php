@@ -61,6 +61,21 @@ class model
             return false;
         }
     }
+    // create member function for change password
+    public function chngpassword($table, $column, $id, $opass, $npass, $cpass, $regid)
+    {
+        $select = "select $column from $table where $id='$regid'";
+        $execute = mysqli_query($this->connection, $select);
+        $fetch = mysqli_fetch_array($execute);
+        $pass = $fetch["password"];
+        if ($pass == $opass && $npass == $cpass) {
+            $update = "update $table set $column='$npass' where $id='$regid'";
+            $execute = mysqli_query($this->connection, $update);
+            return $execute;
+        } else {
+            return false;
+        }
+    }
 
 }
 ?>

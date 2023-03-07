@@ -41,7 +41,7 @@ class controller extends model
             $mobile = $_POST["phone"];
             $datetime = date("d/m/Y H:i:s a");
             if ($password == $cpassword) {
-                $data = array("firstname" => $fnm, "lastname" => $lnm, "email" => $em, "password" => $password, "gender" => $gen, "dob" => $dob, "phone" => $mobile, "datetime" => $datetime);
+                $data = array("firstname" => $firstname, "lastname" => $lastname, "email" => $email, "password" => $password, "gender" => $gen, "dob" => $dob, "phone" => $mobile, "datetime" => $datetime);
                 $chk = $this->insertalldata('register', $data);
                 if ($chk) {
                     echo "<script>
@@ -184,7 +184,7 @@ class controller extends model
 
                 //Recipients
                 $mail->setFrom($_POST["email"], 'Mailer');
-                $mail->addAddress('kripalsinhraa043@gmail.com', 'Kripalsinh Rayjada'); //Add a recipient
+                $mail->addAddress('kripalsinhraa043@gmail.com', 'Brijesh Chikhaliya'); //Add a recipient
 
                 //Attachments
                 // $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
@@ -193,7 +193,7 @@ class controller extends model
                 //Content
                 $mail->isHTML(true); //Set email format to HTML
                 $mail->Subject = 'Forget Password';
-                $mail->Body = "<p><b>Your password : </b>" . $password . "</p>";
+                $mail->Body = "<p><b>Your password : </b>" . $pass . "</p>";
 
                 // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
